@@ -1,0 +1,20 @@
+﻿@model DapperAsp.Models.CustomerRequest
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    @using(@Html.BeginForm("SearchByString", "Customer", FormMethod.Post)){
+    
+        <br/>
+        @Html.LabelFor(model => Model.SearchString)
+        <br/>
+        @Html.TextBoxFor(model => Model.SearchString)  
+
+        <br/>
+        <input type="submit" value="Search" class="btn btn-default"/>
+    }
+
+</div>
